@@ -29,12 +29,15 @@ The extension has the following blocks:
 ## Harwdare
 
 The CCS811 sensor uses I2C to communicate with the micro:bit and uses one of general purpose input/output (GPIO) ports of the micro:bit for the Wake signal of the CCS811 sensor. The following connections should be made:
-*CCS811         micro:bit*
-  Vdd             3V
-GND (EP)          GND
-  SCL         SCL (GPIO 19)
-  SDA         SDA (GPIO 20)
-nWake (WAK)      GPIO 8
+
+|CCS811|micro:bit|
+|:---:|:---:|
+|Vdd|3V|
+|GND (EP)|GND|
+|SCL|SCL (GPIO 19)|
+|SDA|SDA (GPIO 20)|
+|nWake (WAK)|GPIO 8|
+
 (I used the simple CJMCU-8118 breakout board, on which the CCS811 and a HDC1080 sensor are mounted. For this board, the remaining pins (INT, RST and ADD) are not connected).
 
 #### Metadata (used for search, rendering)
