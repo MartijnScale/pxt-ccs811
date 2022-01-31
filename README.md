@@ -7,6 +7,7 @@ This repository can be added as an **extension** in MakeCode.
 It is a basic micro:bit extension for the CCS811, an ultra-low power digital gas sensor for monitoring Indoor Air Quality (IAQ)
 made by **ScioSense B.V.** from Eindhoven, the Netherlands. More info about ScioSense can be found at: www.sciosense.com
 The author of this extensions has no links or interests in ScioSense B.V. or it's products, other than as a user.
+The code is developed for and tested with a CJMCU-8118 breakout board, on which the CCS811 and a HDC1080 sensor are mounted.
 
 To use this **extension** with the micro:bit:
 * open [https://makecode.microbit.org/](https://makecode.microbit.org/)
@@ -25,6 +26,16 @@ The extension has the following blocks:
 - Get eCO2: Returns a value with the ppm estimate of the equivalent CO2 (eCO2) level at the CCS811 sensor
 - Get VOC: Returns a value with the ppb estimate of the total VOC level.
 
+## Harwdare
+
+The CCS811 sensor uses I2C to communicate with the micro:bit and uses one of general purpose input/output (GPIO) ports of the micro:bit for the Wake signal of the CCS811 sensor. The following connections should be made:
+*CCS811         micro:bit*
+  Vdd             3V
+GND (EP)          GND
+  SCL         SCL (GPIO 19)
+  SDA         SDA (GPIO 20)
+nWake (WAK)      GPIO 8
+(I used the simple CJMCU-8118 breakout board, on which the CCS811 and a HDC1080 sensor are mounted. For this board, the remaining pins (INT, RST and ADD) are not connected).
 
 #### Metadata (used for search, rendering)
 
@@ -32,5 +43,6 @@ The extension has the following blocks:
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
 * ScioSense
 * CCS811
+* CJMCU-8118
 * Indoor Air Quality
 * IAQ
