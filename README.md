@@ -25,12 +25,12 @@ The extension has the following blocks:
 - Get eCO2: Returns a value with the ppm estimate of the equivalent CO2 (eCO2) level at the CCS811 sensor
 - Get VOC: Returns a value with the ppb estimate of the total VOC level.
 
-This image shows the blocks code from the last commit in master.
-This image may take a few minutes to refresh.
-
-![A rendered view of the blocks](https://github.com/martijnscale/pxt-ccs811/raw/master/.github/makecode/blocks.png)
 
 #### Metadata (used for search, rendering)
 
 * for PXT/microbit
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+* ScioSense
+* CCS811
+* Indoor Air Quality
+* IAQ
