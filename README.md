@@ -4,21 +4,26 @@
 ## Use as Extension
 
 This repository can be added as an **extension** in MakeCode.
+It is a basic micro:bit extension for the CCS811, an ultra-low power digital gas sensor for monitoring Indoor Air Quality (IAQ)
+made by **ScioSense B.V.** from Eindhoven, the Netherlands. More info about ScioSense can be found at: www.sciosense.com
+The author of this extensions has no links or interests in ScioSense B.V. or it's products, other than as a user.
 
+To use this **extension** with the micro:bit:
 * open [https://makecode.microbit.org/](https://makecode.microbit.org/)
 * click on **New Project**
 * click on **Extensions** under the gearwheel menu
 * search for **https://github.com/martijnscale/pxt-ccs811** and import
 
-## Edit this project ![Build status badge](https://github.com/martijnscale/pxt-ccs811/workflows/MakeCode/badge.svg)
-
-To edit this repository in MakeCode.
-
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/martijnscale/pxt-ccs811** and click import
-
 ## Blocks preview
+
+The extension has the following blocks:
+- CCS811 Init: Should be used in the **on start** block of the micro:bit code, to inititalize the CCS811 sensor
+- Get HardwareID: Returns the hardware-id of the sensor, currently 129 (0x81).
+- Get HardwareVersion: Returns the hardware-version of the sensor, currently 18 (0x12)
+- Get Firmware App version: Returns the firmware version for the application code, currently 32 (0x20)
+- Get Firmware Boot version: Returns the firmware version for the boot code, currently 16 (0x10)
+- Get eCO2: Returns a value with the ppm estimate of the equivalent CO2 (eCO2) level at the CCS811 sensor
+- Get VOC: Returns a value with the ppb estimate of the total VOC level.
 
 This image shows the blocks code from the last commit in master.
 This image may take a few minutes to refresh.
