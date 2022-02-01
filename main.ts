@@ -61,8 +61,8 @@ namespace CCS811 {
         command(chipAddress, CCS811_HW_ID, emptyWord)
         let i2cBuffer = pins.i2cReadBuffer(chipAddress, 1, false)
         let tempnum = i2cBuffer.getUint8(0)
+        pins.digitalWritePin(wakPin, 1)        
         return i2cBuffer.getUint8(0)
-        pins.digitalWritePin(wakPin, 1)
     }
 
     //% block="Get HardwareVersion"
@@ -70,8 +70,8 @@ namespace CCS811 {
         pins.digitalWritePin(wakPin, 0)
         command(chipAddress, CCS811_HW_VERSION, emptyWord)
         let i2cBuffer = pins.i2cReadBuffer(chipAddress, 1, false)
+        pins.digitalWritePin(wakPin, 1)        
         return i2cBuffer.getUint8(0)
-        pins.digitalWritePin(wakPin, 1)
     }
 
     //% block="Get Status"
@@ -79,8 +79,8 @@ namespace CCS811 {
         pins.digitalWritePin(wakPin, 0)
         command(chipAddress, CCS811_STATUS, emptyWord)
         let i2cBuffer = pins.i2cReadBuffer(chipAddress, 1, false)
+        pins.digitalWritePin(wakPin, 1)        
         return i2cBuffer.getUint8(0)
-        pins.digitalWritePin(wakPin, 1)
     }
 
     //% block="Get Firmware App version"
@@ -88,8 +88,8 @@ namespace CCS811 {
         pins.digitalWritePin(wakPin, 0)
         command(chipAddress, CCS811_FW_APP_VERSION, emptyWord)
         let i2cBuffer = pins.i2cReadBuffer(chipAddress, 2, false)
+        pins.digitalWritePin(wakPin, 1)       
         return i2cBuffer.getUint8(0)
-        pins.digitalWritePin(wakPin, 1)
     }
 
     //% block="Get Firmware Boot version"
@@ -106,8 +106,8 @@ namespace CCS811 {
         pins.digitalWritePin(wakPin, 0)
         command(chipAddress, CCS811_ALG_RESULT_DATA, emptyWord)
         let i2cBuffer = pins.i2cReadBuffer(chipAddress, 8, false)
+        pins.digitalWritePin(wakPin, 1)        
         return i2cBuffer.getNumber(NumberFormat.UInt16BE, 0)
-        pins.digitalWritePin(wakPin, 1)
     }
 
     //% block="Get VOC"
@@ -115,8 +115,8 @@ namespace CCS811 {
         pins.digitalWritePin(wakPin, 0)
         command(chipAddress, CCS811_ALG_RESULT_DATA, emptyWord)
         let i2cBuffer = pins.i2cReadBuffer(chipAddress, 8, false)
+        pins.digitalWritePin(wakPin, 1)        
         return i2cBuffer.getNumber(NumberFormat.UInt16BE, 2)
-        pins.digitalWritePin(wakPin, 1)
     }
 
     //% block="CCS811 Init"
