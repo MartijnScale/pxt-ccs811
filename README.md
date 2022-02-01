@@ -40,6 +40,8 @@ The CCS811 sensor uses I2C to communicate with the micro:bit and uses one of gen
 
 (I used the simple CJMCU-8118 breakout board, on which the CCS811 and a HDC1080 sensor are mounted. For this board, the remaining pins (INT, RST and ADD) are not connected).
 
+For a description of the HDC1080 extension, go to https://martijnscale.github.io/pxt-hdc1080/
+
 #### Metadata (used for search, rendering)
 
 * for PXT/microbit
